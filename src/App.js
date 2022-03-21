@@ -43,7 +43,7 @@ function App() {
           {/* <button type='submit'>Submit</button> */}
           {/* <h2>{input}</h2> */}
         </form>
-        <div className="todoParent">
+        <div onMouseLeave={ ()=>{alert('hey')}} className="todoParent">
         <ul>
           {todos.map((todo) => {
             return <li>{todo.text}</li>;
