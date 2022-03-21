@@ -17,7 +17,7 @@
   padding:0;
   margin:0;
   box-sizing: border-box;
-  user-select: none;
+  /* user-select: none; */
 }
 body{
   background-color: #252525;
@@ -84,7 +84,7 @@ li{
 }
 .todoParent{
   scroll-behavior: smooth;
-  height: 540px;
+  height: 510px;
   width:340px;
   display: flex;
   justify-content: center;
