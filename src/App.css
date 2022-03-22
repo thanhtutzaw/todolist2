@@ -60,6 +60,11 @@ li {
   width: 9px;
   height: 9px;
 }
+@media (max-width: 991px){
+  *::-webkit-scrollbar {
+    visibility: visible;
+  }
+}
 .todoParent:hover::-webkit-scrollbar {
   opacity: 1;
 
@@ -99,13 +104,32 @@ li {
 .inputParent {
   position: absolute;
   height: 100vh;
-
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
 
   
+}
+.todo-parent{
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap:.8rem;
+}
+.todo-list-text{
+  width:90%;
+  display: block;
+  word-break:break-all;
+  flex-grow: 1;
+  
+}
+svg path {
+  stroke: #3ae207;
+}
+
+.checkbox{
 }
 .color {
   
