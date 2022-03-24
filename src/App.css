@@ -111,12 +111,18 @@ li {
 
   
 }
+.li-opacity{
+  opacity: .4;
+}
 .todo-parent{
   overflow: hidden;
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap:.8rem;
+}
+.todo-parent-underline{
+  text-decoration: line-through;
 }
 .todo-list-text{
   width:90%;
@@ -129,8 +135,23 @@ svg path {
   stroke: #3ae207;
 }
 
-.checkbox{
+.popup{
+  opacity: .5;
+  transform: scale(.8);
+  transition: all .1s ease-in-out;
 }
+
+.uncheck{
+  display: none;
+}
+.check{
+  display: none;
+}
+form{
+
+  border: 3px solid rgba(111, 236, 8, 0)
+}
+
 .color {
   
   border: 3px solid rgb(111, 236, 8);
