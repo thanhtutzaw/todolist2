@@ -64,6 +64,9 @@ li {
   *::-webkit-scrollbar {
     visibility: visible;
   }
+  *::-webkit-scrollbar-thumb{
+    visibility: visible;
+  }
 }
 .todoParent:hover::-webkit-scrollbar {
   opacity: 1;
@@ -200,16 +203,31 @@ input {
   letter-spacing: 2px;
   max-width: 300px;
 }
-/* input:focus{
+input:focus{
   text-align: left;
   outline:none;
   border-left:3px solid rgba(255, 0, 0, 0.384);
 
-} */
+}
 .clickDiv {
-  /* border:3px solid red; */
   width: 100vw;
   height: 140px;
   position: absolute;
   top: 0;
+}
+.btnParent{
+  position: absolute;
+  right:6px;
+}
+.btn{
+  font-size: 1.4rem;
+  color:white;
+  padding:.7rem;
+  /* background-color: rgba(182, 182, 182, 0.383); */
+  background-color: transparent;
+  border: none;
+  margin-top:-3px;
+}
+.btn:focus{
+  outline:none;
 }

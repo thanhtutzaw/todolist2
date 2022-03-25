@@ -1,4 +1,5 @@
 import React from "react";
+import {CgChevronRightR} from "react-icons/cg"
 
 function Form({input, setInput, color, setcolor, todos, settodos}) {
   // const [uncheck, setuncheck] = useState(false);
@@ -44,6 +45,8 @@ function Form({input, setInput, color, setcolor, todos, settodos}) {
             spellCheck="false"
             placeholder="HELLO"
           />
+          <a className="btnParent" href="https://todolistzee.netlify.app"><button className="btn" type="button"><CgChevronRightR /></button></a>
+          
         </form>
       
   );
