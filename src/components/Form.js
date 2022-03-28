@@ -45,7 +45,7 @@ function Form({input, setInput, color, setcolor, todos, settodos}) {
             spellCheck="false"
             placeholder="HELLO"
           />
-          <a className="btnParent" href="https://todolistzee.netlify.app"><button className="btn" type="button"><CgChevronRightR /></button></a>
+          <a className="btnParent" href="https://todolistzee3.netlify.app"><button className="btn" type="button"><CgChevronRightR /></button></a>
           
         </form>
       
