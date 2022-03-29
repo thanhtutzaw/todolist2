@@ -12,7 +12,7 @@ function App() {
   const [todos, settodos] = useState([]);
 
   const [color, setcolor] = useState(false);
-  const [popup, setpopup] = useState(false);
+  // const [popup, setpopup] = useState(false);
 
   return (
       <div className="App App-header">
@@ -29,8 +29,8 @@ function App() {
         <Todolist
           todos={todos}
           settodos={settodos}
-          popup={popup}
-          setpopup={setpopup}
+          // popup={popup}
+          // setpopup={setpopup}
         />
       {/* </header> */}
     </div>

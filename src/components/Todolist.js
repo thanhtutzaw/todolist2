@@ -12,8 +12,8 @@ function Todolist({ todos, settodos, popup, setpopup }) {
           <Todo 
           todos={todos}
           settodos={settodos}
-          popup={popup}
-          setpopup={setpopup}
+          // popup={popup}
+          // setpopup={setpopup}
           text={todo.text}
           todo={todo}
           />

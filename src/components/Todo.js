@@ -5,23 +5,44 @@ import { GrCheckbox } from "react-icons/gr";
 import { IconContext } from "react-icons";
 
 function Todo({ text, todo, todos, settodos, popup, setpopup }) {
-
   const deleteHandle = () => {
-    setpopup(!popup);
+      settodos(
+        todos.map((item2) => {
+          // setTimeout(() => {
+            setInterval(() => {
+          if (item2.id === todo.id) {
+            return {
+              ...item2,
+                            
+                popup:!item2.popup,
+                
+              };
+            }
+          }, 200);
+            // popup:!item2.popup
+          return item2;
+        })
+      ); 
+    };
+    // setpopup(!popup);
+            
+  //     todos.map((item) => {
+  //   if (item.id === todo.id) {
+      
 
-    setTimeout(() => {
-      setpopup(false);
-    }, 130);
-  };
+  //   }
+
+  // })
+
 
   const checkHandle = () => {
-    
     settodos(
       todos.map((item) => {
         if (item.id === todo.id) {
           return {
             ...item,
             uncheck: !item.uncheck,
+    
           };
         }
         return item;
@@ -39,18 +60,21 @@ function Todo({ text, todo, todos, settodos, popup, setpopup }) {
         >
           <IconContext.Provider value={{ color: "blue" }}>
             <GrCheckbox
+              className={`checkbox ${todo.uncheck ? "uncheck" : ""}`}
               onClick={checkHandle}
-              className={todo.uncheck ? "uncheck" : ""}
             />
-            <GrCheckboxSelected className={todo.uncheck ? "" : "check"} />
-            <span onClick={checkHandle} className="todo-list-text">
-              {todo.text}
-            </span>
+            <GrCheckboxSelected
+              onClick={checkHandle}
+              className={todo.uncheck ? "" : "check"}
+            />
+            <span className="todo-list-text">{todo.text}</span>
+
             <FaTrash
-              className={popup ? "popup" : ""}
+              className={`trash ${todo.popup ? "popup" : ""}`}
               onClick={deleteHandle}
               color="orange"
             />
+
           </IconContext.Provider>
         </div>
       </li>

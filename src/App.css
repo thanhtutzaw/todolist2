@@ -20,7 +20,9 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  /* user-select: none; */
+}
+span,input{
+  user-select: none;
 }
 body {
   background-color: #252525;
@@ -115,7 +117,8 @@ li {
   
 }
 .li-opacity{
-  opacity: .4;
+  opacity: .2;
+  
 }
 .todo-parent{
   overflow: hidden;
@@ -214,6 +217,9 @@ input:focus{
   height: 140px;
   position: absolute;
   top: 0;
+}
+button,.trash,.checkbox{
+  cursor: pointer;
 }
 .btnParent{
   position: absolute;
