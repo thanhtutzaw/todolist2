@@ -6,33 +6,33 @@ import { IconContext } from "react-icons";
 
 function Todo({ text, todo, todos, settodos, popup, setpopup }) {
   const deleteHandle = () => {
+    settodos(
+      todos.map((item2) => {
+        if (item2.id === todo.id) {
+          return {
+            ...item2,
+            // alert('i want to change this boolean value after 2s')
+            popup: !item2.popup,
+          };
+        }
+        return item2;
+      })
+    );
+
+    setTimeout(() => {
       settodos(
         todos.map((item2) => {
-          // setTimeout(() => {
-            setInterval(() => {
           if (item2.id === todo.id) {
             return {
               ...item2,
-                            
-                popup:!item2.popup,
-                
-              };
-            }
-          }, 200);
-            // popup:!item2.popup
+              popup: false,
+            };
+          }
           return item2;
         })
-      ); 
-    };
-    // setpopup(!popup);
-            
-  //     todos.map((item) => {
-  //   if (item.id === todo.id) {
-      
-
-  //   }
-
-  // })
+      );
+    }, 170);
+  };
 
 
   const checkHandle = () => {
@@ -42,7 +42,6 @@ function Todo({ text, todo, todos, settodos, popup, setpopup }) {
           return {
             ...item,
             uncheck: !item.uncheck,
-    
           };
         }
         return item;
@@ -74,7 +73,6 @@ function Todo({ text, todo, todos, settodos, popup, setpopup }) {
               onClick={deleteHandle}
               color="orange"
             />
-
           </IconContext.Provider>
         </div>
       </li>
